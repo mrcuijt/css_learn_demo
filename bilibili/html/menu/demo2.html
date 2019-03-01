@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style rel="stylesheet" type="text/css">
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-size: 14px;
+        }
+
+        body, button, input, select, textarea {
+            font: 12px Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+        }
+
+        .nav {
+            display: block;
+            height: 42px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 2;
+            background: #fff;
+            /*border: 1px solid #ff0000;*/
+        }
+
+        .nav > .mark-bg {
+            height: 100%;
+            /*border: 1px solid #ffdd00;*/
+            background: url("../../css/index/images/24e031e495699e234526586deb80c65d337cbe4d.png");
+            background-position: center -10px;
+            background-repeat: no-repeat;
+            filter: blur(4px);
+        }
+
+        .nav > .mark-c {
+            height: 100%;
+            width: 100%;
+            /*border: 1px solid #ffeeaa;*/
+            background-color: hsla(0, 0%, 100%, .4);
+            position: absolute;
+            top: 0;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+        }
+
+        .nav > .nav-menu-content {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            /*border: 1px solid #ffccdd;*/
+        }
+
+        .nav-menu-content > .nav-menu {
+            height: 100%;
+            width: 980px;
+            margin: 0 auto;
+            /*border: 1px solid #bb22ff;*/
+        }
+
+        .nav-menu > .nav-menu-left {
+            float: left;
+        }
+
+        .nav-menu > .nav-menu-right {
+            float: right;
+        }
+
+        /* 顶部菜单项 */
+        .nav-menu > .nav-menu-left > ul {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .nav-menu > .nav-menu-left > ul > li {
+            line-height: 42px;
+            float: left;
+        }
+
+        .nav-menu > .nav-menu-left > ul > li > a {
+            padding: 6px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        /* 右侧菜单 */
+        .nav-menu > .nav-menu-right {
+            float: right;
+        }
+
+        .nav-menu > .nav-menu-right > ul {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .nav-menu > .nav-menu-right > ul > li {
+            line-height: 42px;
+            float: left;
+        }
+
+        .nav-menu > .nav-menu-right > ul > li > a {
+            padding: 4px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        /* Banner */
+        .banner {
+            height: 170px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            /*border: 1px solid #bb4421;*/
+            background: url("../../css/index/images/24e031e495699e234526586deb80c65d337cbe4d.png");
+            background-position: center -10px;
+            background-repeat: no-repeat;
+        }
+
+        /* Banner */
+        .banner > .logo {
+            position: absolute;
+            bottom: 10px;
+            left: 110px;;
+        }
+
+        .banner > .logo > a {
+            display: block;
+            width: 220px;
+            height: 105px;
+            background-image: url(//i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png);
+        }
+
+        .banner > .banner-content {
+            position: absolute;
+            bottom: 20px;
+            right: 42px;
+            width: 342px;
+            height: 36px;
+            margin-right: 50px;
+            background-color: #e5e9ef;
+            background-color: rgba(0, 0, 0, .12);
+            border-radius: 4px;
+        }
+
+        .banner-content > div {
+            height: 36px;
+            padding-top: 2px;
+            padding-left: 2px;
+            margin: 0px auto;
+        }
+
+        .banner-content .ranking-list { /* 排行榜 */
+            display: block;
+            float: left;
+            width: 68px;
+            height: 32px;
+            margin-right: 3px;
+            border-radius: 4px;
+            background-color: #fff;
+            background-color: hsla(0, 0%, 100%, .88);
+        }
+
+        .banner-content .ranking-list > a {
+            color: #f25d8e;
+            text-decoration: none;
+        }
+
+        .banner-content .ranking-list > a > span {
+            display: inline-block;
+            width: 100%;
+            height: 32px;
+            line-height: 32px;
+            padding-left: 26px;
+            background: url(//static.hdslb.com/images/base/icons.png) -659px -655px no-repeat;
+        }
+
+        .banner-content .search {
+            position: relative;
+            width: 268px;
+            height: 32px;
+            float: left;
+            border-radius: 4px;
+            background-color: #fff;
+            background-color: hsla(0, 0%, 100%, .88);
+        }
+
+        .search input {
+            width: 200px;
+            height: 32px;
+            line-height: 32px;
+            padding: 0 12px;
+            border: 0;
+            border-radius: 6px;
+            box-shadow: none;
+            background-color: transparent;
+        }
+
+        .search input:focus {
+            border: 0;
+            outline: none;
+            box-shadow: none;
+        }
+
+        .search button {
+            display: block;
+            width: 48px;
+            height: 32px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: 0;
+            background-color: transparent;
+            background: url(//static.hdslb.com/images/base/icons.png) -653px -720px;
+        }
+
+        .search button:hover {
+            cursor: pointer;
+            background-position: -718px -720px;
+        }
+
+        .search button:focus {
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav"> <!-- 定义宽度与 absolute top:0; -->
+        <div class="mark-bg"></div><!-- 定义模糊背景 -->
+        <div class="mark-c"></div><!-- 定义透镜背景与阴影 -->
+        <div class="nav-menu-content"><!-- 菜单容器内容定位，设置背景为透明 -->
+            <div class="nav-menu"><!-- 菜单, 定义菜单宽度以及居中和位置 -->
+                <div class="nav-menu-left">
+                    <ul>
+                        <li>
+                            <a class="menu-item" href="javascript:void(0);">主站</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="javascript:void(0);">画友</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="javascript:void(0);">音频</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="javascript:void(0);">游戏中心</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="javascript:void(0);">直播</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="javascript:void(0);">会员购</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="javascript:void(0);">漫画</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="javascript:void(0);">下载APP</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-menu-right">
+                    <ul>
+                        <li>
+                            <a class="menu-item" href="javascript:void(0);">头像</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="javascript:void(0);">大会员</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="javascript:void(0);">消息</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="javascript:void(0);">动态</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="javascript:void(0);">稍后在看</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="javascript:void(0);">收藏夹</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="javascript:void(0);">历史</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="logo">
+            <a href=""></a>
+        </div>
+        <div class="banner-content">
+            <div>
+                <div class="ranking-list">
+                    <a href=""><span>排行榜</span></a>
+                </div>
+                <div class="search">
+                    <form method="get">
+                        <input type="text" placeholder="第一部获奥斯卡的“网络大电影”">
+                        <button type="submit"></button>
+                    </form>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+}
+
+body, button, input, select, textarea {
+    font: 12px Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+}
+
+.clearfix {
+    height: 1px;
+    clear: both;
+}
+
+/* 内容头部 */
+.header {
+
+}
+
+.header > .banner {
+    height: 170px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: url("//i0.hdslb.com/bfs/archive/24e031e495699e234526586deb80c65d337cbe4d.png") no-repeat center -10px;
+}
+
+.banner > .logo {
+    position: absolute;
+    bottom: 10px;
+    left: 110px;;
+}
+
+.banner > .logo > a {
+    display: block;
+    width: 220px;
+    height: 105px;
+    background-image: url(//i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png);
+}
+
+.banner > .banner-content {
+    position: absolute;
+    bottom: 20px;
+    right: 42px;
+    width: 342px;
+    height: 36px;
+    margin-right: 50px;
+    background-color: #e5e9ef;
+    background-color: rgba(0, 0, 0, .12);
+    border-radius: 4px;
+}
+
+.banner-content > div {
+    height: 36px;
+    padding-top: 2px;
+    padding-left: 2px;
+    margin: 0px auto;
+}
+
+.banner-content .ranking-list { /* 排行榜 */
+    display: block;
+    float: left;
+    width: 68px;
+    height: 32px;
+    margin-right: 3px;
+    border-radius: 4px;
+    background-color: #fff;
+    background-color: hsla(0, 0%, 100%, .88);
+}
+
+.banner-content .ranking-list > a {
+    color: #f25d8e;
+    text-decoration: none;
+}
+
+.banner-content .ranking-list > a > span {
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 26px;
+    background: url(//static.hdslb.com/images/base/icons.png) -659px -655px no-repeat;
+}
+
+.banner-content .search {
+    position: relative;
+    width: 268px;
+    height: 32px;
+    float: left;
+    border-radius: 4px;
+    background-color: #fff;
+    background-color: hsla(0, 0%, 100%, .88);
+}
+
+.search input {
+    width: 200px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 12px;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.search input:focus {
+    border: 0;
+    outline: none;
+    box-shadow: none;
+}
+
+.search button {
+    display: block;
+    width: 48px;
+    height: 32px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    background-color: transparent;
+    background: url(//static.hdslb.com/images/base/icons.png) -653px -720px;
+}
+
+.search button:hover {
+    cursor: pointer;
+    background-position: -718px -720px;
+}
+
+.search button:focus {
+    outline: none;
+}
+
+/* 头部菜单 */
+.header > .nav-menu {
+    height: 42px;
+    position: relative;
+}
+
+.header > .nav-menu > .nav-menu-content {
+    background: #fff;
+}
+
+.nav-menu-content > .blur-bg {
+    height: 42px;
+    width: 100%;
+    background-image: url("//i0.hdslb.com/bfs/archive/24e031e495699e234526586deb80c65d337cbe4d.png");
+    background-position: center -10px;
+    background-repeat: no-repeat;
+    filter: blur(4px);
+}
+
+.nav-menu-content > .nav-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 100%, .4);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.nav-menu-content > .menu-content {
+    width: 980px;
+    margin: 0 auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+}
+
+/* 左侧菜单 */
+.menu-content > .menu-content-left {
+    float: left;
+}
+
+.menu-content > .menu-content-left > ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-content > .menu-content-left > ul > li {
+    line-height: 42px;
+    float: left;
+}
+
+.menu-content > .menu-content-left > ul > li > a {
+    padding: 6px;
+    color: #000;
+    text-decoration: none;
+}
+
+/* 右侧菜单 */
+.menu-content > .menu-content-right {
+    float: right;
+}
+
+.menu-content > .menu-content-right > ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-content > .menu-content-right > ul > li {
+    line-height: 42px;
+    float: left;
+}
+
+.menu-content > .menu-content-right > ul > li > a {
+    padding: 4px;
+    color: #000;
+    text-decoration: none;
+}
